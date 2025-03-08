@@ -1,0 +1,533 @@
+/* Custom CSS to complement Skeleton framework */
+
+/* Base Styles */
+body {
+    font-family: 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+  }
+  
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #1c3b5a;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Responsive Images */
+  .responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Logo */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .logo-img {
+    max-height: 40px;
+    margin-right: 10px;
+    display: none; /* Hide on mobile by default */
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    font-family: 'Playfair Display', 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: #1c3b5a;
+  }
+  
+  /* Colors */
+  .button.button-primary,
+  button.button-primary,
+  input[type="submit"].button-primary,
+  input[type="reset"].button-primary,
+  input[type="button"].button-primary {
+    background-color: #1c3b5a;
+    border-color: #1c3b5a;
+  }
+  
+  .button.button-primary:hover,
+  button.button-primary:hover,
+  input[type="submit"].button-primary:hover,
+  input[type="reset"].button-primary:hover,
+  input[type="button"].button-primary:hover {
+    background-color: #2a5885;
+    border-color: #2a5885;
+  }
+  
+  /* Section Dividers */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.1), rgba(0,0,0,0));
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  /* Navigation */
+  .nav-container {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+  }
+  
+  .navigation {
+    display: none; /* Hide on mobile by default */
+  }
+  
+  .navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation ul li {
+    margin: 0 0 15px 0;
+  }
+  
+  .navigation ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 8px 0;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .navigation ul li a:hover,
+  .navigation ul li a.active {
+    color: #1c3b5a;
+  }
+  
+  .navigation ul li a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #1c3b5a;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+  }
+  
+  .navigation ul li a:hover:after,
+  .navigation ul li a.active:after {
+    width: 100%;
+  }
+  
+  /* Mobile Navigation */
+  .nav-mobile {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  #nav-toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+  
+  #nav-toggle span, 
+  #nav-toggle span:before,
+  #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 30px;
+    background: #333;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 300ms ease-in-out;
+  }
+  
+  #nav-toggle span:before {
+    top: -10px;
+  }
+  
+  #nav-toggle span:after {
+    bottom: -10px;
+  }
+  
+  #nav-toggle.active span {
+    background-color: transparent;
+  }
+  
+  #nav-toggle.active span:before, 
+  #nav-toggle.active span:after {
+    top: 0;
+  }
+  
+  #nav-toggle.active span:before {
+    transform: rotate(45deg);
+  }
+  
+  #nav-toggle.active span:after {
+    transform: rotate(-45deg);
+  }
+  
+  .navigation.mobile-nav {
+    display: block;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 20px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #1c3b5a;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(28, 59, 90, 0.8);
+  }
+
+  .hero-logo {
+    max-width: 80vw;
+    height: auto;
+  }
+  
+  .hero h2 {
+    color: #fff;
+    font-size: 3rem;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .hero p {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .hero .button {
+    position: relative;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 60px 0;
+    position: relative;
+  }
+  
+  .section h3 {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .section h3:after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    background: #1c3b5a;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .section.text-center h3:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .light-bg {
+    background-color: #f7f7f7;
+  }
+  
+  /* Value Boxes */
+  .value-box {
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+  }
+  
+  .value-box:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+  }
+  
+  .value-box h4 {
+    margin-bottom: 15px;
+    color: #1c3b5a;
+  }
+  
+  .value-icon {
+    margin-bottom: 15px;
+    border-radius: 50%;
+  }
+  
+  /* Practice Areas */
+  .practice-area {
+    padding: 0 0 20px 0;
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #fff;
+    height: calc(100% - 30px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .practice-area-img-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .practice-area-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .practice-area:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+  }
+  
+  .practice-area:hover .practice-area-img {
+    transform: scale(1.05);
+  }
+  
+  .practice-area h4 {
+    margin-bottom: 15px;
+    color: #1c3b5a;
+    padding: 0 20px;
+  }
+  
+  .practice-area p {
+    margin-bottom: 20px;
+    padding: 0 20px;
+  }
+  
+  .practice-area .button {
+    margin-left: 20px;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background-color: #2a5885;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  
+  .cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(42, 88, 133, 0.8);
+  }
+  
+  .cta-section h3 {
+    color: #fff;
+    position: relative;
+  }
+  
+  .cta-section p {
+    position: relative;
+  }
+  
+  .cta-section .button {
+    position: relative;
+  }
+  
+  .cta-section h3:after {
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1c3b5a;
+    color: #fff;
+    padding: 60px 0 30px;
+  }
+  
+  .footer-logo {
+    margin-bottom: 15px;
+  }
+  
+  footer h5 {
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  footer h5:after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #fff;
+  }
+  
+  .copyright {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    color: #ddd;
+    font-size: 1.4rem;
+  }
+  
+  /* Tablet and Desktop Styles */
+  @media (min-width: 550px) {
+    .hero {
+      padding: 80px 0;
+    }
+    
+    .hero h2 {
+      font-size: 3.6rem;
+    }
+    
+    .logo-img {
+      display: block;
+    }
+
+    .hero-logo {
+        max-width: 48vw;
+        height: auto;
+      }
+  }
+  
+  @media (min-width: 769px) {
+    .container {
+      max-width: 1170px;
+      width: 90%;
+    }
+    
+    .navigation {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100%;
+    }
+    
+    .navigation ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    .navigation ul li {
+      margin: 0 0 0 30px;
+    }
+    
+    .nav-mobile {
+      display: none;
+    }
+    
+    .hero {
+      padding: 120px 0;
+    }
+    
+    .hero h2 {
+      font-size: 4.2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero p {
+      font-size: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .section {
+      padding: 80px 0;
+    }
+    
+    .value-boxes-row {
+      display: flex;
+    }
+    
+    .value-boxes-row .columns {
+      display: flex;
+    }
+    
+    .practice-areas-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .practice-areas-row .columns {
+      display: flex;
+      margin-bottom: 30px;
+    }
+  }
